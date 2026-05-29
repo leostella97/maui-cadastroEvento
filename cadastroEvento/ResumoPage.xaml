@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- página de resumo que exibe os dados do evento cadastrado -->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cadastroEvento.ResumoPage"
+             Title="resumo do evento">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="12">
+
+            <!-- título da página -->
+            <Label Text="resumo do evento"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,10" />
+
+            <!-- exibe o nome do evento -->
+            <Label Text="nome do evento:" FontAttributes="Bold" />
+            <Label x:Name="lblNome" FontSize="16" />
+
+            <!-- exibe a data de início -->
+            <Label Text="data de início:" FontAttributes="Bold" />
+            <Label x:Name="lblDataInicio" FontSize="16" />
+
+            <!-- exibe a data de término -->
+            <Label Text="data de término:" FontAttributes="Bold" />
+            <Label x:Name="lblDataTermino" FontSize="16" />
+
+            <!-- exibe a duração calculada em dias -->
+            <Label Text="duração:" FontAttributes="Bold" />
+            <Label x:Name="lblDuracao" FontSize="16" />
+
+            <!-- exibe o número de participantes -->
+            <Label Text="número de participantes:" FontAttributes="Bold" />
+            <Label x:Name="lblParticipantes" FontSize="16" />
+
+            <!-- exibe o local do evento -->
+            <Label Text="local:" FontAttributes="Bold" />
+            <Label x:Name="lblLocal" FontSize="16" />
+
+            <!-- exibe o custo por participante -->
+            <Label Text="custo por participante:" FontAttributes="Bold" />
+            <Label x:Name="lblCustoPorParticipante" FontSize="16" />
+
+            <!-- linha separadora -->
+            <BoxView HeightRequest="1" Color="LightGray" Margin="0,10" />
+
+            <!-- exibe o custo total em destaque -->
+            <Label Text="custo total do evento:" FontAttributes="Bold" FontSize="18" TextColor="#512BD4" />
+            <Label x:Name="lblCustoTotal" FontSize="20" FontAttributes="Bold" TextColor="#512BD4" />
+
+            <!-- botão para cadastrar um novo evento -->
+            <Button x:Name="btnNovoEvento"
+                    Text="novo evento"
+                    Clicked="BtnNovoEvento_Clicked"
+                    BackgroundColor="#512BD4"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Margin="0,20,0,0" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
